@@ -16,17 +16,19 @@ namespace welcome
 
             Random random = new Random();
             int empInput = random.Next(0, 3);
-       
-            if(empInput == FULL_TIME) 
+            switch(empInput)
             {
-                Console.WriteLine("Employee is present");
-                empHours = 8;
+                case FULL_TIME:
+                    empHours = 8;
+                    break;
+                case PART_TIME:
+                    empHours = 4;
+                    break;
+                default:
+                    empHours = 0;
+                    break;
             }
-            else 
-            {
-                Console.WriteLine("Employee is absent");
-                empHours = 0;
-            }
+            
             empWages = EMP_RATE_PER_HR * empHours;
             Console.WriteLine("Employee wage per day = " +empWages);
             Console.Read();
