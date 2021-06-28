@@ -8,6 +8,8 @@ namespace welcome
         public const int PART_TIME = 2;
         public const int EMP_RATE_PER_HR = 20;
         public const int WORKING_DAYS = 20;
+        public const int MAX_WORKING_HRS = 100;
+        public const int MAX_WORKING_DAYS = 20;
         static void Main(string[] args)
         {
             Console.WriteLine("WELCOME TO EMPLOYEE WAGES COMPUTATION PROGRAM");
@@ -15,9 +17,11 @@ namespace welcome
             int empHours = 0;
             int empWages = 0;
             int totalWage = 0;
+            int workingDays = 1;
+            int workingHours = 0;
 
             Random random = new Random();
-            for (int day = 1; day <= WORKING_DAYS; day++)
+            while (workingDays<= MAX_WORKING_DAYS && workingHours<= MAX_WORKING_HRS)
             {
                 int empInput = random.Next(0, 3);
                 switch (empInput)
@@ -34,9 +38,13 @@ namespace welcome
                 }
 
                 empWages = EMP_RATE_PER_HR * empHours;
+                workingHours += empHours;
                 totalWage += empWages;
-            } 
-            Console.WriteLine("Employee wage " + WORKING_DAYS + "day = "+ totalWage);
+                workingDays++;
+            }
+            Console.WriteLine("WorkingHrs =" + MAX_WORKING_HRS + "Working days=" + workingDays);
+            Console.WriteLine("Employee wage for " + MAX_WORKING_DAYS + "days = "+ totalWage);
+
             Console.Read();
         }
     }
