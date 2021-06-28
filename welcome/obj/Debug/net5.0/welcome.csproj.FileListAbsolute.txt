@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.exe
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.deps.json
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.runtimeconfig.json
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.runtimeconfig.dev.json
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.dll
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\ref\welcome.dll
+C:\Users\user\source\repos\welcome\welcome\bin\Debug\net5.0\welcome.pdb
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.AssemblyInfo.cs
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.dll
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\ref\welcome.dll
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.pdb
+C:\Users\user\source\repos\welcome\welcome\obj\Debug\net5.0\welcome.genruntimeconfig.cache
