@@ -10,7 +10,8 @@ namespace welcome
         public const int WORKING_DAYS = 20;
         public const int MAX_WORKING_HRS = 100;
         public const int MAX_WORKING_DAYS = 20;
-        static void Main(string[] args)
+        //UC7 Introducing class method 
+         public static void ComputeWage()
         {
             Console.WriteLine("WELCOME TO EMPLOYEE WAGES COMPUTATION PROGRAM");
 
@@ -45,6 +46,11 @@ namespace welcome
             Console.WriteLine("WorkingHrs =" + MAX_WORKING_HRS + "Working days=" + workingDays);
             Console.WriteLine("Employee wage for " + MAX_WORKING_DAYS + "days = "+ totalWage);
 
+            
+         }
+        static void Main(string[] args)
+        {
+            ComputeWage();
             Console.Read();
         }
     }
