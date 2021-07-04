@@ -11,10 +11,10 @@ namespace welcome
         {
             Console.WriteLine("Welcome to Employee Wages Computation");
             //creating object for each company
-            EmployeeWageBuilder EmployeeWage = new EmployeeWageBuilder();
-            EmployeeWage.addDetail("Zoho", 40, 15, 250);
-            EmployeeWage.addDetail("flipkkart", 40, 25, 350);
-            EmployeeWage.ComputeWage();
+            EmployeeWageBuilder employeeWage = new EmployeeWageBuilder();
+            employeeWage.addDetail("Reliance", 20, 25, 100);
+            employeeWage.addDetail("Big-Bazaar", 50, 30, 150);
+            employeeWage.ComputeWage();
             Console.Read();
         }
     }
