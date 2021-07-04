@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace welcome
 {
-    class ComputeWages
-    {
-        public interface ComputeEmpWages
-        {
-            public void addDetail(string companyName, int employeeRatePerHr, int maxWorkingDays, int maxWorkingHrs);
-            public void ComputeWages();
 
-        }
+    public interface IComputeEmpWage
+    {
+        public void addDetail(string companyName, int employeeRatePerHr, int maxWorkingDays, int maxWorkingHrs);
+        public void ComputeWage();
+       
+
     }
 }

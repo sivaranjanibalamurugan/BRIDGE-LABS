@@ -6,31 +6,34 @@ using System.Threading.Tasks;
 
 namespace welcome 
 {
-    class EmployeeWageBuilder :ComputeWages
-    { //adding constant global variable
-          const int IS_FULL_TIME = 1;
-           const int IS_PART_TIME = 2;
+    class EmployeeWageBuilder : IComputeEmpWage
+    {
+        //adding constant global variable
+        const int IS_FULL_TIME = 1;
+        const int IS_PART_TIME = 2;
 
-          EmployeeDetails[] employeeDetails;
-           int numOfCompany = 0;
-       public EmployeeWageBuilder()
+        LinkedList<EmployeeDetails> employeeDetailsList;
+        public EmployeeWageBuilder()
         {
-            this.employeeDetails = new EmployeeDetails[10];
+            this.employeeDetailsList = new LinkedList<EmployeeDetails>();
         }
-       public void addDetail(string companyName, int employeeRatePerHr, int maxWorkingDays, int maxWorkingHrs)
+        public void addDetail(string companyName, int employeeRatePerHr, int maxWorkingDays, int maxWorkingHrs)
         {
-            employeeDetails[this.numOfCompany] = new EmployeeDetails(companyName, employeeRatePerHr, maxWorkingDays, maxWorkingHrs);
-            numOfCompany++;
+            EmployeeDetails employee = new EmployeeDetails(companyName, employeeRatePerHr, maxWorkingDays, maxWorkingHrs);
+            this.employeeDetailsList.AddLast(employee);
         }
 
-       public void ComputeWage()
+        public void ComputeWage()
         {
-            for (int i = 0; i < numOfCompany; i++)
+            foreach (EmployeeDetails employee in this.employeeDetailsList)
             {
-                employeeDetails[i].SetEmployeeWage(this.ComputeEmployeeWage(this.employeeDetails[i]));
-                Console.WriteLine(this.employeeDetails[i].toString());
+                employee.SetEmployeeWage(this.ComputeEmployeeWage(employee));
+                employee.DisplayDailyWage(employee);
+                Console.WriteLine(employee.toString());
             }
         }
+
+
         private int ComputeEmployeeWage(EmployeeDetails details)
         {
             //initialize local variable 
@@ -67,6 +70,8 @@ namespace welcome
 
                 //calculating Daily wages of Employee by Working Hours
                 empWages = empHrs * details.employeeRatePerHr;
+                //sets the daily wage 
+                details.SetDailyWage(empWages, details);
                 monthlyWages = monthlyWages + empWages;
                 workingHr += empHrs;
 
