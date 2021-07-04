@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace welcome
+namespace welcome 
 {
-    class EmployeeWageBuilder
+    class EmployeeWageBuilder :ComputeWages
     { //adding constant global variable
           const int IS_FULL_TIME = 1;
            const int IS_PART_TIME = 2;

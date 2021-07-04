@@ -13,7 +13,7 @@ namespace welcome
             //creating object for each company
             EmployeeWageBuilder EmployeeWage = new EmployeeWageBuilder();
             EmployeeWage.addDetail("Zoho", 40, 15, 250);
-            EmployeeWage.addDetail("flipkkart", 40, 25, 350);
+            EmployeeWage.addDetail("flipkart", 40, 25, 350);
             EmployeeWage.ComputeWage();
             Console.Read();
         }
